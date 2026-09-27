@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>In Her Own Words — Independent Women's Magazine</title>
+<meta name="description" content="In Her Own Words — stories, culture, style and creative work by and about women.">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&display=swap');
+:root{--paper:#f5f0e8;--ink:#171513;--muted:#6e665e;--line:#bcb3a8;--rose:#c7a0a0}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:'DM Sans',sans-serif}a{text-decoration:none;color:inherit}
+.ticker{background:var(--ink);color:var(--paper);padding:9px 4vw;text-align:center;font-size:10px;letter-spacing:.2em;text-transform:uppercase}
+header{padding:26px 4vw 20px;border-bottom:1px solid var(--ink);position:sticky;top:0;background:rgba(245,240,232,.96);z-index:5}
+.head{display:grid;grid-template-columns:1fr auto 1fr;align-items:center}.wordmark{font-family:'Playfair Display',serif;font-size:27px;line-height:.82;text-align:center;letter-spacing:-.04em}.leftnav,.rightnav{display:flex;gap:20px;font-size:10px;text-transform:uppercase;letter-spacing:.14em}.rightnav{justify-content:flex-end}.hamb{display:none}
+.hero{display:grid;grid-template-columns:1.05fr .95fr;min-height:78vh;border-bottom:1px solid var(--ink)}
+.hero-text{padding:9vw 6vw 7vw 8vw;display:flex;justify-content:center;flex-direction:column}.issue{font-size:10px;text-transform:uppercase;letter-spacing:.22em;margin-bottom:26px}
+h1{font-family:'Playfair Display',serif;font-size:clamp(70px,10vw,150px);font-weight:400;line-height:.78;letter-spacing:-.075em;margin:0 0 35px}.dek{font-family:'Playfair Display',serif;font-size:21px;line-height:1.42;max-width:530px}.link{font-size:10px;letter-spacing:.18em;text-transform:uppercase;margin-top:25px;border-bottom:1px solid var(--ink);width:max-content;padding-bottom:7px}
+.hero-art{position:relative;overflow:hidden;background:#cdb4ad}.hero-art .sun{position:absolute;width:55%;aspect-ratio:1;border-radius:50%;background:#efe2d3;top:12%;left:24%}.hero-art .figure{position:absolute;width:38%;height:69%;left:31%;bottom:-4%;border-radius:45% 45% 4% 4%;background:linear-gradient(105deg,#7b5f5e,#c9a7a0 52%,#594647);transform:rotate(-3deg)}.hero-art .label{position:absolute;bottom:25px;left:28px;color:white;font-family:'Playfair Display',serif;font-style:italic;font-size:14px}
+
+.intro{padding:45px 8vw;border-bottom:1px solid var(--ink);display:grid;grid-template-columns:1fr 2fr;gap:7vw}.intro h2,.section-title{font-family:'Playfair Display',serif;font-weight:400;font-size:50px;letter-spacing:-.05em;margin:0}.intro p{font-family:'Playfair Display',serif;font-size:23px;line-height:1.4;margin:0;max-width:800px}
+.section{padding:70px 5vw;border-bottom:1px solid var(--ink)}.section-top{display:flex;align-items:end;justify-content:space-between;border-bottom:1px solid var(--ink);padding-bottom:13px;margin-bottom:28px}.section-note{font-size:9px;letter-spacing:.18em;text-transform:uppercase}
+.features{display:grid;grid-template-columns:1.5fr .75fr .75fr;gap:20px}.story{min-width:0}.photo{background:#b99b93;aspect-ratio:4/5;margin-bottom:16px;position:relative;overflow:hidden}.photo:before{content:"";position:absolute;inset:0;background:linear-gradient(145deg,#d7c3ba,#957477 50%,#332b2d);opacity:.9}.photo.alt:before{background:linear-gradient(145deg,#ddd0bd,#a99a84 55%,#564c48)}.photo.cool:before{background:linear-gradient(145deg,#c3cdd0,#7b7374 55%,#353033)}.big .photo{aspect-ratio:1/1.05}.story .tag{font-size:9px;text-transform:uppercase;letter-spacing:.16em;color:var(--muted)}.story h3{font-family:'Playfair Display',serif;font-size:32px;font-weight:400;line-height:1.03;letter-spacing:-.035em;margin:8px 0}.big h3{font-size:45px}.story p{font-family:'Playfair Display',serif;font-size:16px;line-height:1.45;color:#554e48;margin:8px 0}
+
+.split{display:grid;grid-template-columns:1fr 1fr;min-height:600px;border-bottom:1px solid var(--ink)}.split-art{background:linear-gradient(135deg,#d8c4bd,#967477 55%,#3a3031);position:relative}.split-art:after{content:"EDITORIAL 01";position:absolute;bottom:25px;left:25px;color:white;font-size:10px;letter-spacing:.2em}.split-copy{padding:8vw;display:flex;flex-direction:column;justify-content:center}.eyebrow{font-size:10px;text-transform:uppercase;letter-spacing:.2em}.split-copy h2{font-family:'Playfair Display',serif;font-size:clamp(55px,6vw,90px);font-weight:400;line-height:.85;letter-spacing:-.065em;margin:22px 0}.split-copy p{font-family:'Playfair Display',serif;font-size:19px;line-height:1.5;max-width:510px}
+
+.quote{padding:100px 10vw;text-align:center;border-bottom:1px solid var(--ink)}.quote p{font-family:'Playfair Display',serif;font-style:italic;font-size:clamp(38px,5vw,70px);line-height:1;letter-spacing:-.05em;margin:0 auto;max-width:1100px}.quote span{display:block;font:10px 'DM Sans',sans-serif;letter-spacing:.2em;text-transform:uppercase;margin-top:30px}
+
+.contribute{padding:70px 8vw;display:grid;grid-template-columns:1fr 1fr;gap:8vw}.contribute h2{font-family:'Playfair Display',serif;font-size:65px;font-weight:400;line-height:.9;letter-spacing:-.06em;margin:0}.contribute p{font-family:'Playfair Display',serif;font-size:20px;line-height:1.5}.button{display:inline-block;border:1px solid var(--ink);padding:13px 19px;font-size:9px;letter-spacing:.18em;text-transform:uppercase;margin-top:10px}
+footer{border-top:1px solid var(--ink);padding:30px 5vw;display:grid;grid-template-columns:1fr 1fr 1fr;font-size:9px;letter-spacing:.14em;text-transform:uppercase}.foot-center{text-align:center}.foot-right{text-align:right}
+@media(max-width:800px){header{position:relative}.head{grid-template-columns:1fr auto}.leftnav,.rightnav{display:none}.hamb{display:block;font-size:10px;text-transform:uppercase;letter-spacing:.15em}.hero{grid-template-columns:1fr}.hero-art{min-height:60vh}.hero-text{padding:80px 8vw}.intro,.contribute{grid-template-columns:1fr;gap:30px}.features{grid-template-columns:1fr}.big .photo,.photo{aspect-ratio:4/5}.split{grid-template-columns:1fr}.split-art{min-height:55vh}.section{padding:55px 7vw}footer{grid-template-columns:1fr;gap:15px}.foot-center,.foot-right{text-align:left}}
+</style>
+</head>
+<body>
+<div class="ticker">INDEPENDENT WOMEN'S MAGAZINE · ISSUE 01 · COMING SOON</div>
+<header><div class="head">
+<nav class="leftnav"><a href="#journal">Journal</a><a href="#culture">Culture</a><a href="#style">Style</a></nav>
+<a class="wordmark" href="#">IN HER<br>OWN WORDS</a>
+<nav class="rightnav"><a href="#people">People</a><a href="#about">About</a><a href="#submit">Submit</a></nav>
+<div class="hamb">Menu</div>
+</div></header>
+
+<main>
+<section class="hero">
+<div class="hero-text"><div class="issue">Volume I · The Becoming Issue</div><h1>In Her<br>Own Words</h1><div class="dek">A new independent magazine exploring women, culture, identity, style, creativity and the stories we tell about ourselves.</div><a class="link" href="#journal">Enter the journal →</a></div>
+<div class="hero-art"><div class="sun"></div><div class="figure"></div><div class="label">The first issue begins here.</div></div>
+</section>
+
+<section class="intro"><h2>Why we exist</h2><p>There is no single way to be a woman. <em>In Her Own Words</em> is a space for the contradictions, conversations and quiet moments that make up modern womanhood — told by the people living them.</p></section>
+
+<section class="section" id="journal"><div class="section-top"><div class="section-title">The Journal</div><div class="section-note">Essays · Opinion · Identity</div></div>
+<div class="features">
+<article class="story big"><div class="photo"></div><div class="tag">Cover Story</div><h3>The art of becoming someone new</h3><p>What happens when the person you were expected to become no longer feels like you?</p></article>
+<article class="story"><div class="photo alt"></div><div class="tag">Personal Essay</div><h3>On being the good daughter</h3><p>The expectations we inherit — and the ones we quietly rewrite.</p></article>
+<article class="story"><div class="photo cool"></div><div class="tag">Opinion</div><h3>Taking up space</h3><p>Ambition, confidence and the strange pressure to remain likeable.</p></article>
+</div></section>
+
+<section class="section" id="culture"><div class="section-top"><div class="section-title">Culture</div><div class="section-note">Books · Film · Internet · Ideas</div></div>
+<div class="features">
+<article class="story"><div class="photo cool"></div><div class="tag">Books</div><h3>The stories that taught us how to be women</h3><p>Reading, girlhood and the books we carry into adulthood.</p></article>
+<article class="story"><div class="photo alt"></div><div class="tag">Commentary</div><h3>Girlhood after the internet</h3><p>Growing up when everyone is watching, posting and performing.</p></article>
+<article class="story big"><div class="photo"></div><div class="tag">Culture</div><h3>Who gets to define femininity?</h3><p>There is no single answer — and that's exactly the point.</p></article>
+</div></section>
+
+<section class="split" id="style"><div class="split-art"></div><div class="split-copy"><div class="eyebrow">The Edit · Fashion & Beauty</div><h2>Dressing<br>for yourself.</h2><p>Style can be performance, armour, pleasure, rebellion or simply fun. Our fashion and beauty stories look beyond the trend cycle and ask what getting dressed means to the women doing it.</p><a class="link" href="#style">View the edit →</a></div></section>
+
+<section class="section" id="people"><div class="section-top"><div class="section-title">People</div><div class="section-note">Interviews · Profiles · Portraits</div></div>
+<div class="features">
+<article class="story big"><div class="photo alt"></div><div class="tag">Interview</div><h3>Making something of your own</h3><p>Conversations with women building creative lives, careers and communities.</p></article>
+<article class="story"><div class="photo cool"></div><div class="tag">Portrait</div><h3>Her story</h3><p>The person behind the image.</p></article>
+<article class="story"><div class="photo"></div><div class="tag">Conversation</div><h3>In her own words</h3><p>What inspires her, challenges her and keeps her moving.</p></article>
+</div></section>
+
+<section class="quote"><p>“There is no right way to be a woman. There are only the stories we choose to tell about who we are.”</p><span>In Her Own Words</span></section>
+
+<section class="contribute" id="submit"><div><div class="eyebrow">Contribute</div><h2>Have something to say?</h2></div><div><p>We're building a collaborative creative community of writers, photographers, artists, designers, researchers and creators. If you have a story, image series, idea or perspective that belongs here, we'd love to hear from you.</p><a class="button" href="mailto:hello@inherownwords.example">Send a pitch →</a></div></section>
+
+<section class="contribute" id="about"><div><div class="eyebrow">About</div><h2>A space to speak.</h2></div><div><p><strong>In Her Own Words</strong> is an independent digital magazine about women and modern femininity — not as one fixed idea, but as something shaped by culture, identity, relationships, creativity, ambition and everyday life.</p><p>We're interested in thoughtful stories, honest conversations and beautiful creative work.</p></div></section>
+</main>
+
+<footer><div>© 2026 In Her Own Words</div><div class="foot-center">Women · Culture · Identity · Becoming</div><div class="foot-right">Independent & collaborative</div></footer>
+</body></html>
